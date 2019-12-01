@@ -39,14 +39,14 @@ class MainActivity : AppCompatActivity() {
     fun loginBtnNavClicked (view:View){
 
         val loginIntent = Intent(this,LoginActivity::class.java) // aqui creo el intent
-        startActivity(loginIntent) // con esto logro que desde el loginNtnNavCliccked al oprimirlo yo vaya a la siguiente actividad  LoginActivity que contiene activity_login
+        startActivity(loginIntent) // con esto logro que desde el loginBtnNavClicked al oprimirlo yo vaya a la siguiente actividad  LoginActivity que contiene activity_login
     }
 
     fun addChannelClicked (view: View){
 
     }
 
-    fun sendMessageBtnClicked (view: View){
+    fun sendMsgBtnClicked (view: View){
 
     }
 }
