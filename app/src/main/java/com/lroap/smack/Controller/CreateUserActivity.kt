@@ -1,9 +1,11 @@
-package com.lroap.smack
+package com.lroap.smack.Controller
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.lroap.smack.R
+import com.lroap.smack.Services.AuthService
 import kotlinx.android.synthetic.main.activity_create_user.*
 import java.util.*
 
@@ -48,10 +50,15 @@ class CreateUserActivity : AppCompatActivity() {
         val savedB = b.toDouble()/ 255
 
         avatarColor = "[$savedR, $savedG, $savedB, 1]" // aqui llamo avatarColor de arriba solo que paso mis nuevas variables
-        println(avatarColor) //esto me sirve para ver en el log cat el numero
+       // println(avatarColor) //esto me sirve para ver en el log cat el numero
     }
 
-    fun createUserClicked (view: View){
+    fun createUserClicked(view: View){
+        AuthService.registerUser(this,"j@j.com", "123456"){ complete ->
 
+            if(complete){
+
+            }
+        }
     }
 }
